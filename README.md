@@ -1,6 +1,8 @@
 # my-iterm2
 My iterm2 configuration steps
 
+[English](README.md) | [简体中文](README.zh.md)
+
 ## Screenshots
 ![screenshot](images/Snipaste1.png)
 
@@ -11,11 +13,11 @@ System: macOS
 
 ## Get started
 
-### 1. Install Nerd Fonts
+### Install Nerd Fonts
 1. Download Nerd Fonts from [here](https://www.nerdfonts.com/font-downloads) (I use FiraCode Nerd Font)
 2. Install Nerd Fonts
 
-### 1. Install iTerm2
+### Install iTerm2
 1. Download iTerm2 from [here](https://www.iterm2.com/)
 2. Install iTerm2
 3. Set iTerm2 font to Nerd Fonts
@@ -53,13 +55,13 @@ System: macOS
   # 6. set Status bar location to Bottom
   ```
 
-### 2. Install oh-my-zsh and plugins(zsh-autosuggestions, zsh-syntax-highlighting)
+### Install oh-my-zsh and plugins(zsh-autosuggestions, zsh-syntax-highlighting)
 1. Install oh-my-zsh from [here](https://ohmyz.sh/#install)
   ```bash
   # quick install
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
-1. Install zsh-autosuggestions from [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+2. Install zsh-autosuggestions from [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
   ```bash
   # 1. Clone this repository in oh-my-zsh's plugins directory:
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -68,8 +70,9 @@ System: macOS
     # other plugins...
     zsh-autosuggestions
   )
+  # 3. Restart your shell
   ```
-1. Install zsh-syntax-highlighting from [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+3. Install zsh-syntax-highlighting from [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
   ```bash
   # 1. Clone this repository in oh-my-zsh's plugins directory:
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -78,11 +81,11 @@ System: macOS
     # other plugins...
     zsh-syntax-highlighting
   )
-  # 3. Restart zsh (such as by opening a new instance of your terminal emulator).
+  # 3. Restart your shell
   ```
 
 
-### 3. Install Starship
+### Install Starship
 1. Install Starship from [here](https://starship.rs/guide/#%F0%9F%9A%80-installation)
   ```bash
   # 1. Install with Shell:
@@ -90,19 +93,26 @@ System: macOS
   # 2. Add the init script to your shell's config file:
   # Zsh
   echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-  # 3. Configure Starship
-  mkdir -p ~/.config && touch ~/.config/starship.toml
-  # 4. Replace the starship.toml file with the one in this repo (my-iterm2/starship.toml)
-  # 5. Restart your shell
+  ```
+2. Configure Starship
+  ```bash
+  # 1. Create the config directory if it doesn't already exist:
+  mkdir -p ~/.config
+  # 2. Replace the starship.toml file with the one in this repo (my-iterm2/starship.toml)
+  mv my-iterm2/starship.toml ~/.config/starship.toml
+  # 3. Restart your shell
   ```
 
-### 4. Install neofetch
+### Install neofetch
 Need to install homebrew first from [here](https://brew.sh/)
 ```bash
 # Need to install homebrew first 
+
+# 1. Install neofetch
 brew install neofetch
-# Add neofetch to zshrc
+# 2. Add neofetch to zshrc
 echo 'neofetch' >> ~/.zshrc
+# 3. Restart your shell
 ```
 
 ## References
@@ -115,4 +125,4 @@ echo 'neofetch' >> ~/.zshrc
 7. [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+[MIT](LICENSE)
